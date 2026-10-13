@@ -17,7 +17,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('WinZenFlow • Timer'),
+        title: const Text('Win • Timer'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
