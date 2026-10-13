@@ -43,16 +43,19 @@ jobs:
         with:
           name: release-builds
           path: |
-            build/app/outputs/bundle/release/app-release.aab
-            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/*.aab
+            build/app/outputs/flutter-apk/*.apk
 
-      - name: Publish GitHub Release (Direct Download Link)
+      - name: Create Release
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/heads/main')
         with:
           tag_name: v1.0.0
-          name: "Release v1.0.0"
+          name: Release v1.0.0
+          draft: false
+          prerelease: false
           files: |
-            build/app/outputs/bundle/release/app-release.aab
-            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/*.aab
+            build/app/outputs/flutter-apk/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
