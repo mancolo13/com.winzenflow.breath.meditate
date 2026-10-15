@@ -36,10 +36,10 @@ class _Tab2ScreenState extends State<Tab2Screen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildFilterChip('All', 0),
-                _buildFilterChip('Active', 1),
-                _buildFilterChip('Popular', 2),
-                _buildFilterChip('Archived', 3),
+                _buildFilterChip('4-7-8 Breath', 0),
+                _buildFilterChip('Box Rhythm', 1),
+                _buildFilterChip('Pranayama', 2),
+                _buildFilterChip('Body Scan', 3),
               ],
             ),
           ),
@@ -70,7 +70,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Relax Item #${idx + 101}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(const ['Dawn Awakening Flow', 'Deep Unwind Session', 'Midday Stress Relief', 'Focus Booster Breath', 'Evening Night Drift'][idx], style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       const SizedBox(height: 4),
                       Text('Category: Tier ${idx + 1} • Updated 2h ago', style: const TextStyle(color: Colors.white60, fontSize: 12)),
                     ],
